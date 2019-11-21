@@ -6,14 +6,13 @@ end
 
 # For iterative
 def iterative_fib(num)
-  a = 0
-  b = 1
-  num.times do
-    temp = a
-    a = b
-    b = temp + b
+  terms = [0,1]
+  i = 2
+  while i<=num
+    terms.append(terms[i-1] + terms[i-2])
+    i = i + 1
   end
-  return a
+  return terms [num]
 end
 
 require 'benchmark'
